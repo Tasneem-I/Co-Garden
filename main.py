@@ -14,3 +14,25 @@ Session(app)
 db = SQLAlchemy()
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+class Users(UserMixin,db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(70),nullable=False)
+    email = db.Column(db.String(50),nullable=False)
+    password= db.Column(db.String(50),nullable=False)
+    username = db.Column(db.String(40),nullable=False)
+    hash = db.Column(db.String(40),nullable=False)
+    sppassword = db.Column(db.String, nullable= False)
+
+db.init_app(app)
+with app.app_context():
+    db.create_all()
+
+@login_manager.user_loader
+def user_load(user_id):
+   return Users.query.get(user_id)
+
+
+@app.route('/')
+def home():
+    return render_template('/templates/index.html')
