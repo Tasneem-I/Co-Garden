@@ -21,8 +21,6 @@ class Users(UserMixin,db.Model):
     email = db.Column(db.String(50),nullable=False)
     password= db.Column(db.String(50),nullable=False)
     username = db.Column(db.String(40),nullable=False)
-    hash = db.Column(db.String(40),nullable=False)
-    sppassword = db.Column(db.String, nullable= False)
 
 db.init_app(app)
 with app.app_context():
@@ -35,4 +33,34 @@ def user_load(user_id):
 
 @app.route('/')
 def home():
-    return render_template('/templates/index.html')
+    return render_template('index.html')
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        user = Users.query.filter_by(email = request.form.get("email")).first()
+        if user.password == request.form.get("password"):
+            login_user(user)
+            session["user"] = user
+            return render_template("index.html")
+    return render_template("login.html")
+
+@app.route("/signup",methods=["GET","POST"])
+def signup():
+    if request.method=="POST":
+         name=request.form.get("name")
+         email=request.form.get("email")
+         username = request.form.get("username")
+         password=request.form.get("password")
+         user = Users(name=name,email=email,username=username,password=password)
+         db.session.add(user)
+         db.session.commit()
+
+         return render_template("index.html")
+    return render_template("signup.html")
+
+
+
+if __name__ == "__main__":
+    app.run(debug="True")
