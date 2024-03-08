@@ -1,70 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CO GARDEN</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style type="text/css">
-    * {
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CO GARDEN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+        background: #F7D9B1;
+        font-family: PaleCornflowerBlue;
+        padding: 10px 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+      }
+      .logo a {
+        font-size: 35px;
+        font-weight: 600;
+        color:#6d7a71 ;
+        text-decoration: none;
+
+      }
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        text-decoration: none;
+      }
+      .nav-links a {
+        color: #6d7a71;
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 25px;
+        text-decoration: none;
+      }
+      .button-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      button {
+        background-color: #e8d7c7;
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 90px;
+      }
+      button a {
+        color: #6d7a71;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+      }
+      body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
+      background-color: #FFF7ED; /* Set the background color for the body */
     }
-    body {
-      margin: 0;
-      padding: 0;
+    hr {
+      border: 0; /* Remove default border */
+      height: 10px; /* Set height */
+      background-color: #240505; /* Set background color */
+      margin: 20px 0; /* Add margin */
     }
-    .navbar {
-      background: #F7D9B1;
-      font-family: PaleCornflowerBlue;
-      padding: 10px 15px;
-      width: 100%;
-    }
-    .navdiv {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo a {
-      font-size: 35px;
-      font-weight: 600;
-      color: white;
-    }
-    .navdiv a {
-      color: #6d7a71;
-      font-size: 20px;
-      font-weight: bold;
-      margin-right: 25px;
-    }
-    .button-wrapper {
-      display: flex;
-      align-items: center;
-    }
-    button {
-      background-color: #e8d7c7;
-      margin-left: 10px;
-      border-radius: 10px;
-      padding: 10px;
-      width: 90px;
-    }
-    button a {
-      color: white;
-      font-weight: bold;
-      font-size: 15px;
-      text-decoration: none;
-    }
-    .carousel-image {
-      width: 500px;
-      height: 300px;
-    }
-  </style>
-</head>
-<body bgcolor="#FFF7ED">
-  <nav class="navbar">
-    <div class="navdiv">
-      <div class="logo"><a href="#">CO GARDEN</a></div>
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">CO GARDEN</a>
+      </div>
       <div class="nav-links">
         <a href="#">HOME</a>
         <a href="#">PLANNER</a>
@@ -74,34 +91,41 @@
         <button><a href="#">LOGIN</a></button>
         <button><a href="#">SIGNUP</a></button>
       </div>
+    </nav>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="\static\sandie-clarke-q13Zq1Jufks-unsplash.jpg" alt="First slide" style="height: 450px;width: 400px;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="\static\neslihan-gunaydin-BduDcrySLKM-unsplash.jpg" alt="Second slide" style="height: 450px;width: 400px;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="\static\markus-spiske-4PG6wLlVag4-unsplash.jpg" alt="Third slide" style="height: 450px;width: 400px;">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-  </nav>
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="\static\sandie-clarke-q13Zq1Jufks-unsplash.jpg" alt="First slide" style="height: 450px;width: 400px;">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="\static\neslihan-gunaydin-BduDcrySLKM-unsplash.jpg" alt="Second slide" style="height: 450px;width: 400px;">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="\static\markus-spiske-4PG6wLlVag4-unsplash.jpg" alt="Third slide" style="height: 450px;width: 400px;">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/8vcUJ+djLW5gi+0vIbbV6Hv/a8eW6pVF1ks7xs" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <br><br>
+     <h1 style="font-family: 'Courier New', Courier, monospace; "><center>FEATURES</center></h1><br><br>
+  <hr> 
+  
+  
+  
+  
+  
+  </body>
 </html>
+
 
 
 
