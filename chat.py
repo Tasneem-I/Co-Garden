@@ -94,3 +94,11 @@ index_name='cogardens'
 indexsearch = PineconeVectorStore.from_documents(docs, embeddings, index_name=index_name)
 index = pc.Index(index_name)
 print(index.describe_index_stats())
+
+
+def get_similiar_docs(query,k=1,score=False):
+  if score:
+    similar_docs = index.similarity_search_with_score(query,k=k)
+  else:
+    similar_docs = index.similarity_search(query,k=k)
+  return similar_docs
