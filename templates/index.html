@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CO GARDEN</title>
@@ -68,12 +69,13 @@
     padding: 0;
     background-color: #FFF7ED; /* Set the background color for the body */
   }
-  hr {
-    border: 5px; /* Remove default border */
-    height: 10px; /* Set height */
-    background-color: #240505; /* Set background color */
-    margin: 20px 0; /* Add margin */
-  }
+  hr.dashed {
+  border: none;
+  border-top: 10px dashed brown;
+  height: 0;
+  margin: 20px 0;
+}
+
   .container {
     display: flex;
     align-items: center;
@@ -89,9 +91,11 @@
   }
   .text {
     font-size: 20px;
+    color: black; 
     max-width: 50%; /* Limit text width */
     text-align: justify; /* Justify text */
     margin-right: 20px; /* Add margin between text and first image */
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   /* Adjustments for the third container */
   .container:nth-child(3) .image {
@@ -102,6 +106,80 @@
     margin-left: 0; /* Remove margin to align text to the left */
     margin-right: 20px; /* Add margin to separate text from image */
   }
+  footer {
+
+background-color: #F7D9B1}
+
+.footerContainer{
+
+width: 100%;
+
+padding: 70px 30px 20px;
+
+ }
+
+.socialIcons{
+
+display: flex;
+
+justify-content: center;
+}
+.socialIcons a{
+text-decoration: none;
+padding: 10px;
+background-color: white;
+margin: 10px;
+border-radius: 50%;
+
+}
+
+.socialIcons a:hover{
+  background-color: #240505;
+  transition: 0.5s;
+}
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+.footerNav{
+  margin: 30px 0;
+
+}
+.footerNav ul{
+
+  display: flex;
+  justify-content: center;
+}
+.footerNav ul{
+  list-style: none;
+}
+.footerNav ul li a{
+  
+color: black;
+margin: 20px;
+text-decoration: none;
+font-size: 0.5ms;
+opacity: 0.7;
+transition: 0.5s;
+
+
+}
+.footerNav ul li a:hover{
+
+  opacity: 1;
+}
+.footerBottom{
+  background-color: #F7D9B1 ;
+  padding: 20px;
+  text-align: center;
+}
+hr.gradient {
+  border: none;
+  background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
+  height: 2px;
+  margin: 20px 0;
+}
+
 </style>
 </head>
 <body>
@@ -115,34 +193,48 @@
     <a href="#">CHAT</a>
   </div>
   <div class="button-wrapper">
-    <button><a href="#">LOGIN</a></button>
-    <button><a href="#">SIGNUP</a></button>
+    <button><a href="login.html">LOGIN</a></button>
+    <button><a href="signup.html">SIGNUP</a></button>
   </div>
 </nav>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+
+
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="\static\neslihan-gunaydin-BduDcrySLKM-unsplash.jpg" alt="First slide" style="height: 450px;width: 400px;">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="\static\sandie-clarke-q13Zq1Jufks-unsplash.jpg" alt="Second slide" style="height: 450px;width: 400px;">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="\static\markus-spiske-4PG6wLlVag4-unsplash.jpg" alt="Third slide" style="height: 450px;width: 400px;">
-    </div>
+      <div class="carousel-item active">
+          <img src="https://i.insider.com/5f4024f189aff80028ab7494" class="d-block w-100" alt="First Image">
+          
+      </div>
+      <div class="carousel-item">
+          <img src="https://blog.weekdone.com/wp-content/uploads/2019/05/rdYe01mg.png" class="d-block w-100" alt="First Image">
+          
+      </div>
+      <div class="carousel-item">
+          <img src="https://ak.picdn.net/shutterstock/videos/8592619/thumb/1.jpg" class="d-block w-100" alt="First Image">
+         
+      </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
   </a>
 </div>
+
+
 <br>
-<h1 style="font-family: 'Courier New', Courier, monospace; "><center>FEATURES</center></h1>
-<hr> 
+
+<hr class="dashed"> 
+<h1 style="font-family: 'Courier New', Courier, monospace; color: #8b6f47; "><b><center>FEATURES</center></b></h1><br>
 <div class="container">
   <div class="text">
     <p>Have a brown thumb but dream of a flourishing garden? Don't worry, you're not alone! Our friendly gardening chatbot is here to be your personal plant whisperer.  Ask any question you have, from seed selection to pest control, and get expert advice tailored to your specific needs.</p>
@@ -167,8 +259,8 @@
     <img src="\static\watering-plants.png" alt="Description of the image">
   </div>
 </div>
-<hr>
-<h1 style="font-family: 'Courier New', Courier, monospace; "><center>WHY?</center></h1><br><br>
+<hr class="dashed">
+<h1 style="font-family: 'Courier New', Courier, monospace;color: #8b6f47; "><b><center>WHY?</center></b></h1><br><br>
 
 
 <div class="container">
@@ -195,11 +287,34 @@
     <p>Gardening is a wellspring for mental well-being. Immersing yourself in nature provides a calming environment, lowering anxiety and promoting feelings of peace. The repetitive tasks of weeding or planting offer a mindfulness practice, allowing you to focus on the present moment and let go of worries.  Witnessing the fruits (or vegetables!) of your labor, literally watching life flourish under your care, fosters a sense of accomplishment and boosts self-esteem.</p>
   </div>
 </div><br>
+<footer>
+<div class="footercontainer">
+  <div class="socialIcons">
+<a href=""><i class="fa-brands fa-facebook"></i></a>
+<a href=""><i class="fa-brands fa-instagram"></i></a>
+<a href=""><i class="fa-brands fa-twitter"></i></a>
+<a href=""><i class="fa-brands fa-youtube"></i></a>
+</div>
 
 
+<div class="footerNav">
+  <ul>
+
+    <li ><a href=" ">Home</a></li>
+    <li ><a href=" ">Contact Us</a></li>
+    <li ><a href=" ">About</a></li>
+    <li ><a href=" ">Our Team</a></li>
+  </ul>
+</div>
 
 
-
+<div class="footerBottom">
+  <p>Copyright &copy;2024</p>
+  
+  
+  </div>
+  
+</footer>
 
 
 </body>
