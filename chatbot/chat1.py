@@ -1,14 +1,19 @@
+import streamlit as st
+from streamlit_chat import message
+from streamlit_extras.stylable_container import stylable_container 
 
-
-
-
-
-
-
-
-
-
-
+bg="""
+<style>
+[data-testid="stApp"]{
+background-color: #f7d9b1;
+}
+[data-testid="textInputRootElement"]{
+background-color: #fff000;
+}
+</style>"""
+st.markdown(bg,unsafe_allow_html=True)
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import ConversationChain
@@ -19,8 +24,7 @@ from langchain.prompts import (
     ChatPromptTemplate,
     MessagesPlaceholder
 )
-import streamlit as st
-from streamlit_chat import message
+
 import openai
 import os
 from pinecone import Pinecone
@@ -87,28 +91,29 @@ response_container = st.container()
 # container for text box
 textcontainer = st.container()
 
-
-with textcontainer:
-    query = st.text_input("Query: ", key="input")
-    if query:
-        with st.spinner("typing..."):
-            conversation_string = get_conversation_string()
+with stylable_container(key="request",css_styles=["""{background-color:#fff1db;}"""]):
+    with textcontainer:
+        query = st.text_input("Query: ", key="input")
+        if query:
+            with st.spinner("typing..."):
+                conversation_string = get_conversation_string()
             # st.code(conversation_string)
-            refined_query = query_refiner(conversation_string, query)
-            st.subheader("Refined Query:")
-            st.write(refined_query)
-            context = find_match(refined_query)
+                refined_query = query_refiner(conversation_string, query)
+                st.subheader("Refined Query:")
+                st.write(refined_query)
+                context = find_match(refined_query)
             # print(context)  
-            response = conversation.predict(input=f"Context:\n {context} \n\n Query:\n{query}")
-        st.session_state.requests.append(query)
-        st.session_state.responses.append(response) 
-with response_container:
-    if st.session_state['responses']:
+                response = conversation.predict(input=f"Context:\n {context} \n\n Query:\n{query}")
+            st.session_state.requests.append(query)
+            st.session_state.responses.append(response) 
+with stylable_container(key="response",css_styles="""div {background-color:white; color-scheme:light;}"""):
+    with response_container:
+        if st.session_state['responses']:
 
-        for i in range(len(st.session_state['responses'])):
-            message(st.session_state['responses'][i],key=str(i))
-            if i < len(st.session_state['requests']):
-                message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user')
+            for i in range(len(st.session_state['responses'])):
+                message(st.session_state['responses'][i],key=str(i))
+                if i < len(st.session_state['requests']):
+                    message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user')
 
 
 

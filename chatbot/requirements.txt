@@ -1,0 +1,9 @@
+streamlit
+streamlit_chat
+langchain
+openai==0.28
+langchain_community
+pinecone_client
+sentence_transformers
+langchain_pinecone
+os
