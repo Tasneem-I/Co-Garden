@@ -26,11 +26,12 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+    
   }
   .logo a {
     font-size: 35px;
     font-weight: 600;
-    color:#6d7a71 ;
+    color: #285430 ;
     text-decoration: none;
   }
   .nav-links {
@@ -39,12 +40,14 @@
     align-items: center;
     flex-grow: 1;
     text-decoration: none;
+    
   }
   .nav-links a {
-    color: #6d7a71;
+    color: #894949;
     font-size: 20px;
     font-weight: bold;
-    margin-right: 25px;
+    margin-right: 60px;
+    margin-left: 60px;
     text-decoration: none;
   }
   .button-wrapper {
@@ -53,7 +56,7 @@
   }
   button {
     background-color: #e8d7c7;
-    margin-left: 10px;
+    margin-left: 50px;
     border-radius: 10px;
     padding: 10px;
     width: 90px;
@@ -114,7 +117,7 @@ background-color: #F7D9B1}
 
 width: 100%;
 
-padding: 70px 30px 20px;
+padding: 70px 70px 70px;
 
  }
 
@@ -126,19 +129,19 @@ justify-content: center;
 }
 .socialIcons a{
 text-decoration: none;
-padding: 10px;
-background-color: white;
+padding: 20px;
+background-color: none;
 margin: 10px;
 border-radius: 50%;
 
 }
-
+y
 .socialIcons a:hover{
-  background-color: #240505;
+  background-color: white;
   transition: 0.5s;
 }
 .socialIcons a:hover i{
-  color: white;
+  
   transition: 0.5s;
 }
 .footerNav{
@@ -156,7 +159,7 @@ border-radius: 50%;
 .footerNav ul li a{
   
 color: black;
-margin: 20px;
+margin: 40px;
 text-decoration: none;
 font-size: 0.5ms;
 opacity: 0.7;
@@ -185,12 +188,17 @@ hr.gradient {
 <body>
 <nav class="navbar">
   <div class="logo">
-    <a href="#">CO GARDEN</a>
+    <a href="#">
+      <img src="\static\icons8-gardening-64.png" alt="CO GARDEN Logo" style="height: 50px; margin-right: 10px;">
+      CO GARDEN
+    </a>
   </div>
   <div class="nav-links">
     <a href="#">HOME</a>
     <a href="#">PLANNER</a>
     <a href="#">CHAT</a>
+    <a href="#">CONTACT</a>
+
   </div>
   <div class="button-wrapper">
     <button><a href="login.html">LOGIN</a></button>
@@ -200,34 +208,27 @@ hr.gradient {
 
 
 
-<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-  <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+<div class="carousel slide" id="sliders" data-bs-ride ='true'>
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#sliders" data-bs-slide-to ='0' class="active"></button>
+      <button type="button" data-bs-target="#sliders" data-bs-slide-to="1"></button>
+  </div>
   <div class="carousel-inner">
-      <div class="carousel-item active">
-          <img src="https://i.insider.com/5f4024f189aff80028ab7494" class="d-block w-100" alt="First Image">
-          
+      <div class="carousel-item active" data-bs-interval="3000">
+          <img src="\static\c1.jpeg" class="d-block w-100" style="height: 600px;">
       </div>
       <div class="carousel-item">
-          <img src="https://blog.weekdone.com/wp-content/uploads/2019/05/rdYe01mg.png" class="d-block w-100" alt="First Image">
-          
-      </div>
-      <div class="carousel-item">
-          <img src="https://ak.picdn.net/shutterstock/videos/8592619/thumb/1.jpg" class="d-block w-100" alt="First Image">
-         
+          <img src = "\static\c2.jpeg" class="d-block w-100" style="height: 600px;">
       </div>
   </div>
-  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-  </a>
+  <button class="carousel-control-prev" type="button" data-bs-target="#sliders" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#sliders" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
 
@@ -281,7 +282,7 @@ hr.gradient {
 </div><br>
 <div class="container">
   <div class="image">
-    <img src="\static\mentalhealth.png" alt="Description of the image">
+    <img src="\static\mentalhealth-removebg-preview.png" alt="Description of the image">
   </div>
   <div class="text">
     <p>Gardening is a wellspring for mental well-being. Immersing yourself in nature provides a calming environment, lowering anxiety and promoting feelings of peace. The repetitive tasks of weeding or planting offer a mindfulness practice, allowing you to focus on the present moment and let go of worries.  Witnessing the fruits (or vegetables!) of your labor, literally watching life flourish under your care, fosters a sense of accomplishment and boosts self-esteem.</p>
@@ -290,10 +291,10 @@ hr.gradient {
 <footer>
 <div class="footercontainer">
   <div class="socialIcons">
-<a href=""><i class="fa-brands fa-facebook"></i></a>
-<a href=""><i class="fa-brands fa-instagram"></i></a>
-<a href=""><i class="fa-brands fa-twitter"></i></a>
-<a href=""><i class="fa-brands fa-youtube"></i></a>
+&nbsp;<a href="" ><img src="\static\instagram.png"; height="50px";width="50px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="" ><img src="\static\facebook.png"; height="50px";width="50px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="" ><img src="\static\youtube.png"; height="50px";width="50px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="" ><img src="\static\twitter.png"; height="50px";width="50px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
 
@@ -316,10 +317,9 @@ hr.gradient {
   
 </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-b2oUE/cFE6y4W1gB3BqB5Zl+nc1mEHpVG9DHdQt9i2IgP2Vp5z0N/k61pIYUP6S" crossorigin="anonymous"></script>
 </body>
 </html>
-
 
 
 
