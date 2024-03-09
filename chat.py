@@ -82,13 +82,14 @@ docs = split_docs(documents)
 print(len(docs))
 
 from langchain_community.embeddings import SentenceTransformerEmbeddings
-import os
 embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-pinecone_api_key = os.environ.get('PINECONE_API_KEY')
+
 from pinecone import Pinecone, PodSpec
 from langchain_pinecone import PineconeVectorStore
-pc = Pinecone(api_key=pinecone_api_key)
+import os
+pinecone_api_key = os.getenv('PINECONE_API_KEY')
 spec=PodSpec(environment='gcp-starter')
+pc=Pinecone(api_key=pinecone_api_key)
 index_name='cogardens'
 indexsearch = PineconeVectorStore.from_documents(docs, embeddings, index_name=index_name)
 index = pc.Index(index_name)
