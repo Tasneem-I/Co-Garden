@@ -1,6 +1,5 @@
 import streamlit as st
-from streamlit_chat import message
-from streamlit_extras.stylable_container import stylable_container 
+from streamlit_chat import message 
 
 bg="""
 <style>
