@@ -1,5 +1,11 @@
 # Co-Gardens
-## Inspiration
+# How to Use
+1. Clone the repository onto local machine
+2. Set environment variable keys for PINECONE_API_KEY and OPENAI_API_KEY.
+3. Run app.py
+4. Run chat1.py using the command streamlit run chat1.py
+
+# Inspiration
 We were inspired to work on Co Gardens by a deep-rooted passion for environmental stewardship and holistic wellness. Witnessing the growing need for sustainable solutions in urban environments, we saw an opportunity to merge our love for gardening with our desire to make a positive impact on the world.
 The recognition of the disconnect between people and their food sources further fueled our motivation. We were driven by the belief that reconnecting individuals with the process of growing their own food could not only promote healthier lifestyles but also foster a deeper appreciation for the environment.
 
