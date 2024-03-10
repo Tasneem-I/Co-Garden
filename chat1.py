@@ -15,8 +15,6 @@ div.avatar {
 }
 </style>"""
 st.markdown(bg,unsafe_allow_html=True)
-with open('style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import ConversationChain
@@ -107,12 +105,13 @@ with textcontainer:
             response = conversation.predict(input=f"Context:\n {context} \n\n Query:\n{query}")
         st.session_state.requests.append(query)
         st.session_state.responses.append(response) 
+
 with response_container:
     if st.session_state['responses']:
         for i in range(len(st.session_state['responses'])):
-            message(st.session_state['responses'][i],key=str(i))
+            message(st.session_state['responses'][i],key=str(i),logo=('https://raw.githubusercontent.com/SuchitraM-05/Co-Garden/main/static/bot.png'))
             if i < len(st.session_state['requests']):
-                message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user')
+                message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user',logo=('https://raw.githubusercontent.com/SuchitraM-05/Co-Garden/main/static/user.png'))
                 
 
 
