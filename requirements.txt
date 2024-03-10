@@ -6,7 +6,6 @@ langchain_community
 pinecone_client
 sentence_transformers
 langchain_pinecone
-os
 flask
 flask_session
 flask_sqlalchemy

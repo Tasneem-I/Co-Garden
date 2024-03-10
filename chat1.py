@@ -60,7 +60,7 @@ def get_conversation_string():
         conversation_string += "Human: "+st.session_state['requests'][i] + "\n"
         conversation_string += "Bot: "+ st.session_state['responses'][i+1] + "\n"
     return conversation_string
-st.subheader("CO-GARDENS")
+st.title("CO-GARDENS")
 
 if 'responses' not in st.session_state:
     st.session_state['responses'] = ["How can I assist you?"]
@@ -109,9 +109,9 @@ with textcontainer:
 with response_container:
     if st.session_state['responses']:
         for i in range(len(st.session_state['responses'])):
-            message(st.session_state['responses'][i],key=str(i),logo=('https://raw.githubusercontent.com/SuchitraM-05/Co-Garden/main/static/bot.png'))
+            message(st.session_state['responses'][i],key=str(i),logo=('https://raw.githubusercontent.com/SuchitraM-05/Co-Garden/main/static/bot_profile.png'))
             if i < len(st.session_state['requests']):
-                message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user',logo=('https://raw.githubusercontent.com/SuchitraM-05/Co-Garden/main/static/user.png'))
+                message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user',logo=('https://raw.githubusercontent.com/SuchitraM-05/Co-Garden/main/static/user_profile.png'))
                 
 
 
