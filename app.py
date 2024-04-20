@@ -37,7 +37,9 @@ def user_load(user_id):
 def home():
     return render_template("index.html")
 
-
+@app.route("/home")
+def homes():
+    return render_template("home_loggedin.html")
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
