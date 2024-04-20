@@ -45,9 +45,16 @@ def login():
         if user.password == request.form.get("password"):
             login_user(user)
             session["user"] = user
-            return render_template("index.html")
+            logins= True
+            return render_template("home_loggedin.html", login=logins)
     return render_template("login.html")
 
+
+@app.route('/logout')
+def logout():
+    # Simulating a logout
+    session.pop('username', None)
+    return render_template('index.html')
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -60,7 +67,7 @@ def signup():
         db.session.add(user)
         db.session.commit()
 
-        return render_template("index.html")
+        return render_template("home_loggedin.html")
     return render_template("signup.html")
 
 
