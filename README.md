@@ -1,4 +1,20 @@
 # Co-Gardens
+# Team
+1. **Suchitra M** 
+   - Worked on developing Figma prototype of planner page
+   - Worked on frontend of the main website using Bootstrap
+2. **Tasneem I**
+   - Worked on flask and database integration for main website
+   - Worked on model training and vector embedding
+   - Developed chatbot and its UI using Langchain and Streamlit
+3. **Thejuswini R**
+   - Worked on frontend development of main website using Bootstrap
+   - Helped in data collection and cleaning
+4. **Trisheta S**
+   - Worked on frontend development of main website using Bootstrap
+   - Helped in data collection and cleaning
+  
+   
 # How to Use
 1. Clone the repository onto local machine
 2. Set environment variable keys for PINECONE_API_KEY and OPENAI_API_KEY.
