@@ -1,16 +1,17 @@
 # Co-Gardens
 # Team
-1. **Suchitra M** 
+1. **Suchitra M** : 
    - Worked on developing Figma prototype of planner page
    - Worked on frontend of the main website using Bootstrap
-2. **Tasneem I**
+2. **Tasneem I** : https://github.com/Tasneem-I
    - Worked on flask and database integration for main website
    - Worked on model training and vector embedding
    - Developed chatbot and its UI using Langchain and Streamlit
-3. **Thejuswini R**
-   - Worked on frontend development of main website using Bootstrap
-   - Helped in data collection and cleaning
-4. **Trisheta S**
+3. **Thejuswini R** :
+   - Contributed to frontend development of main website using HTML, CSS, and Bootstrap.
+   - Assisted in data collection and cleaning process.
+   - Took an active role in creating the final presentation for the hackathon.
+4. **Trisheta S** :
    - Worked on frontend development of main website using Bootstrap
    - Helped in data collection and cleaning
   
