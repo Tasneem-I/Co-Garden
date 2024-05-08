@@ -12,8 +12,9 @@
    - Assisted in data collection and cleaning process.
    - Took an active role in creating the final presentation for the hackathon.
 4. **Trisheta S** : https://github.com/Trisheta
-   - Worked on frontend development of main website using Bootstrap
-   - Helped in data collection and cleaning
+   - Played a key role in creating the static web pages of Co-Gardens using Bootstrap, HTML and CSS.
+   - Worked on data collection and cleaning which is used to train the chatbot.
+   - Contributed in making the final ppt depicting the overall summary. 
   
    
 # How to Use
